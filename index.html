@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Username Form</title>
+    <style>
+        body {
+            background-color: lightpink;
+        }
+        .login-container {
+            max-width: 350px;
+            margin: 80px auto;
+            padding: 30px 25px;
+            background: #fff0f6;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #d63384;
+        }
+        label {
+            color: #d63384;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px 0;
+            border-radius: 5px;
+            border: 1px solid #d63384;
+        }
+        button {
+            background: #d63384;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ad1457;
+        }
+    </style>
+    <script>
+        function validateLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            if (username && password) {
+                alert('Welcome, ' + username + '!');
+                {   <form action="index.html" method="post"> // redirect on success;
+
+                }
+            } else {
+                alert('Please enter both us ername and password.');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="login-container">
+        <form onsubmit="validateLogin(event)">
+            <h2>Login Form</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
